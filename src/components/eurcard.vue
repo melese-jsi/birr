@@ -1,5 +1,5 @@
 <template>
-  <div>
+ <v-app>
     <v-card
     class="mx-auto"
     prepend-icon="mdi-currency-eur"
@@ -7,12 +7,12 @@
     width="450"
   >
     <template v-slot:title>
-      <span class="font-weight-black">EUR exchange rates</span>
+      <span class="font-weight-black">EUR exchange rates of banks</span>
       <br/><span class="text-caption"> {{ date }}</span>
     </template>
 
     <v-card-text class="bg-surface-light pt-4">
-    <v-table height="450px" fixed-header>
+    <!-- <v-table height="450px" fixed-header>
       <thead>
         <tr>
           <th class="font-weight-bold">Bank</th>
@@ -27,37 +27,68 @@
           <td>{{ res.selling.toFixed(2) }}</td>
         </tr>
       </tbody>
-    </v-table>
-    </v-card-text>
-    </v-card>
-  </div>
+    </v-table> -->
+    <v-list
+      :items="result"
+      lines="three"
+      item-props
+    >
+      <template v-slot:subtitle="{ subtitle }">
+        <div v-html="subtitle"></div>
+      </template>
+    </v-list>
+  </v-card-text>
+  </v-card>
+ 
+  </v-app>
 </template>
 
-<script>
-const httpdata = async () => {
-  const response = await fetch(
-    "https://api.addissoftware.com/banks-ethiopia/api/exchanges/cardData"
-  );
-  if (response.status !== 200) {
-    throw Error("No data found");
-  }
-  //console.log(response)
-  const data = await response.json();
+<script lang="js">
+import logos from './logos.json'
 
-  //console.log(data)
-  let usd_data = data.filter((item) => Object.keys(item).includes("EUR"))[0];
-  //   for(const obj of data)
-  //   {
-  //     console.log(obj)
+const httpdata = async ()=>{
+    const response = await fetch("https://api.addissoftware.com/banks-ethiopia/api/exchanges/cardData")
+    if (response.status !==200) {
+      throw Error("No data found")
+    }
+    //console.log(response)
+    const data = await response.json()
 
-  //      if(obj && Object.keys(obj).includes('EUR')){
-  //        usd_data=obj['EUR'];
-  //        break;
-  //      }
-  //   }
-  console.log(usd_data);
-  return usd_data["EUR"];
-};
+    //console.log(data)
+    let usd_data=data.filter((item)=>Object.keys(item).includes('EUR'))[0]
+    //console.log(usd_data["USD"].length)
+    let lists =[]
+    for(let x=0; x<=usd_data['EUR'].length;x++)
+    {
+      let obj = usd_data['EUR'][x]
+      console.log(obj)
+     const temp = {prependAvatar: '@/assets/logo.png'}
+     if (obj !=undefined){
+      temp.title=obj['bank'].charAt(0).toUpperCase() + obj['bank'].slice(1)
+      temp.subtitle = `<span class="text-primary pa-3">Buying</span> &mdash; <span class="chip"> `+obj['buying'].toFixed(2)+` </span><br/><br/> <span class="text-primary pa-3">Selling </span>&mdash;<span class="chip1"> `+obj['selling'].toFixed(2)+`</span>`
+      temp.prependAvatar=logos[obj['bank']]
+      lists.push(temp)
+      lists.push({ type: 'divider', inset: true })
+     }
+
+     
+      // temp.subtitle= d['buying']
+     
+    }
+    console.log(lists)
+
+    // for(let obj of data)
+    // {
+
+    //    if(obj&& Object.keys(obj).includes('USD')){
+    //      usd_data=obj['USD'];
+    //      break;
+    //    }
+    // }
+
+    return lists;
+
+}
 
 export default {
   name: "eurcardView",
@@ -76,4 +107,23 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 25px;
+  background-color:lightsteelblue;
+}
+.chip1 {
+  display: inline-block;
+  padding: 0 25px;
+  height: 17px;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 25px;
+  background-color:lightgray;
+}
+</style>
