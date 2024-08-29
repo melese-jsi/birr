@@ -1,17 +1,21 @@
 <template>
   <v-app>
-    <div>
+    
+    
+    
       <v-card
     class="mx-auto"
     prepend-icon="mdi-currency-usd"
      
-    width="450"
-  >
-    <template v-slot:title>
-      <span class="font-weight-black">USD exchange rates of banks</span>
-      <br/><span class="text-caption"> {{ date }}</span>
-    </template>
     
+  >
+   
+    <template v-slot:title><div class="wrap">
+      <span class="font-weight-black text-wrap">USD exchange rates of banks</span>
+      <br/><span class="text-caption"> {{ date }}</span>
+    </div>
+    </template>
+
     <v-card-text class="bg-surface-light pt-4">
      
       <!-- <v-table height="450px" fixed-header>
@@ -38,17 +42,19 @@
           v-for="message in result"
           :key="message.title"
           :dot-color="red"
-          :icon="message.prependAvatar"
-          size="x-small"
+          :icon="message.icon"
+          size="xsmall"
+          hide-dot=true
         >
+        
           <div class="mb-4">
-            <div class="font-weight-normal">
-              <strong>{{ message.title }}</strong>
-            </div>
-
+            <v-icon size="x-large" ><v-img :src="message.prependAvatar"></v-img></v-icon><strong class="pa-2">{{ message.title }}</strong>
+            
+            <v-divider></v-divider>
+            
             <div><span class="text-primary pa-3">Buying</span> &mdash; <span class="chip">{{ message.buying }} </span>
               <br/>
-              <span class="text-primary pa-3">Selling </span>&mdash;<span class="chip1"> {{ message.selling }}</span>
+              <span class="text-primary pa-3">Selling </span>&mdash;<span class="chip1" > {{ message.selling }}</span>
             </div>
           </div>
         </v-timeline-item>
@@ -56,8 +62,9 @@
    
       
   </v-card-text>
+
   </v-card>
-    </div>
+    
   </v-app>
 </template>
 
@@ -91,6 +98,7 @@ const httpdata = async ()=>{
       temp.selling=obj['selling'].toFixed(2)
       temp.subtitle = `<span class="text-primary pa-3">Buying</span> &mdash; <span class="chip"> `+obj['buying'].toFixed(2)+` </span><br/><br/> <span class="text-primary pa-3">Selling </span>&mdash;<span class="chip1"> `+obj['selling'].toFixed(2)+`</span>`
       temp.prependAvatar= logos[obj['bank']]
+      temp.icon ="<v-icon='home'></v-icon>"
       lists.push(temp)
       //lists.push({ type: 'divider', inset: true })
      }
@@ -168,6 +176,8 @@ export default {
 </script>
 
 <style>
+
+
 .chip {
   display: inline-block;
   padding: 0 25px;

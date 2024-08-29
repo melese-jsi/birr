@@ -5,10 +5,10 @@
     class="mx-auto"
     prepend-icon="mdi-currency-gbp"
      
-    width="450"
+   
   >
     <template v-slot:title>
-      <span class="font-weight-black">GBP exchange rates of banks</span>
+      <span class="font-weight-black text-wrap">GBP exchange rates of banks</span>
       <br/><span class="text-caption"> {{ date }}</span>
     </template>
 
@@ -30,7 +30,7 @@
             </tr>
           </tbody>
         </v-table> -->
-        <v-list
+        <!-- <v-list
       :items="result"
       lines="three"
       item-props
@@ -38,7 +38,30 @@
       <template v-slot:subtitle="{ subtitle }">
         <div v-html="subtitle"></div>
       </template>
-    </v-list>
+    </v-list> -->
+
+    <v-timeline align="start" density="compact">
+        <v-timeline-item
+          v-for="message in result"
+          :key="message.title"
+          :dot-color="red"
+          :icon="message.icon"
+          size="xsmall"
+          hide-dot=true
+        >
+        
+          <div class="mb-4">
+            <v-icon size="x-large" ><v-img :src="message.prependAvatar"></v-img></v-icon><strong class="pa-2">{{ message.title }}</strong>
+            
+            <v-divider></v-divider>
+            
+            <div><span class="text-primary pa-3">Buying</span> &mdash; <span class="chip">{{ message.buying }} </span>
+              <br/>
+              <span class="text-primary pa-3">Selling </span>&mdash;<span class="chip1" > {{ message.selling }}</span>
+            </div>
+          </div>
+        </v-timeline-item>
+      </v-timeline>
         </v-card-text>
         </v-card>
       </div>
@@ -68,9 +91,11 @@
      if (obj !=undefined){
       temp.title=obj['bank'].charAt(0).toUpperCase() + obj['bank'].slice(1)
       temp.subtitle = `<span class="text-primary pa-3">Buying</span> &mdash; <span class="chip"> `+obj['buying'].toFixed(2)+` </span><br/><br/> <span class="text-primary pa-3">Selling </span>&mdash;<span class="chip1"> `+obj['selling'].toFixed(2)+`</span>`
+      temp.buying = obj['buying']
+      temp.selling=obj['selling']
       temp.prependAvatar=logos[obj['bank']]
       lists.push(temp)
-      lists.push({ type: 'divider', inset: true })
+      //lists.push({ type: 'divider', inset: true })
      }
 
      
