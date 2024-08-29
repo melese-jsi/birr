@@ -48,8 +48,8 @@
         >
         
           <div class="mb-4">
-            <v-icon size="x-large" ><v-img :src="message.prependAvatar"></v-img></v-icon><strong class="pa-2">{{ message.title }}</strong>
-            
+            <!-- <v-icon size="x-large" ><v-img :src="message.prependAvatar"></v-img></v-icon>--><strong class="pa-2">{{ message.title }}</strong>
+             
             <v-divider></v-divider>
             
             <div><span class="text-primary pa-3">Buying</span> &mdash; <span class="chip">{{ message.buying }} </span>

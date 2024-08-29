@@ -39,7 +39,7 @@
         >
         
           <div class="mb-4">
-            <v-icon size="x-large" ><v-img :src="message.prependAvatar"></v-img></v-icon><strong class="pa-2">{{ message.title }}</strong>
+            <!-- <v-icon size="x-large" ><v-img :src="message.prependAvatar"></v-img></v-icon> --><strong class="pa-2">{{ message.title }}</strong>
             
             <v-divider></v-divider>
             
