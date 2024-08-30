@@ -61,7 +61,7 @@
           <boacardView></boacardView>  
         </v-tabs-window-item>
         <v-tabs-window-item value="cbe">
-          <eurcardView></eurcardView>
+          <cbecardView></cbecardView>
         </v-tabs-window-item>
 
       </v-tabs-window>
@@ -79,13 +79,15 @@ import usdcardView from  '@/components/usdcard.vue'
 import eurcardView from '@/components/eurcard.vue'
 import gbpcardView from '@/components/gbpcard.vue'
 import boacardView from '@/components/boacard.vue'
+import cbecardView from '@/components/cbecard.vue'
 export default {
   name: "App",
   components:{
     usdcardView,
     eurcardView,
     gbpcardView,
-    boacardView
+    boacardView,
+    cbecardView
   },
 
   data: () => ({

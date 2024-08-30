@@ -8,7 +8,7 @@
    
   >
     <template v-slot:title>
-      <span class="font-weight-black text-wrap">Recent USD exchange rates of BOA</span>
+      <span class="font-weight-black text-wrap">Recent USD exchange rates of CBE</span>
       
     </template>
 
@@ -46,11 +46,11 @@
 const httpdata = async ()=>{
     console.log("heyyy")
     
-    const response = await fetch("https://banksethiopia.com/wp-json/graph/v1/all?bankName=abyssinia&dateRange=ThisMonth")
+    const response = await fetch("https://banksethiopia.com/wp-json/graph/v1/all?bankName=cbe&dateRange=ThisMonth")
    
     
     const data_thismonth = await response.json()
-    const response2 = await fetch("https://banksethiopia.com/wp-json/graph/v1/all?bankName=abyssinia&dateRange=LastMonth")
+    const response2 = await fetch("https://banksethiopia.com/wp-json/graph/v1/all?bankName=cbe&dateRange=LastMonth")
     const data_lastmonth = await response2.json()
 
     //format data for presentation
@@ -87,7 +87,7 @@ const httpdata = async ()=>{
 }
 
 export default {
-    name: "boacardView",
+    name: "cbecardView",
     data() {
     return { thismonth: [] ,
         lastmonth:[]
