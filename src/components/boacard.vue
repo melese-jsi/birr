@@ -59,16 +59,19 @@ const httpdata = async ()=>{
     if (thismonth)
     {
         let thismonth_usd_buying = thismonth['USD']['buying']
+        
         let thismonth_usd_selling = thismonth['USD']['selling']
         let thismonth_dates = thismonth['categories']
-
+        //reverse them
+        thismonth_usd_buying.reverse()
+            thismonth_usd_selling.reverse()
+            thismonth_dates.reverse()
+            console.log(thismonth_dates)
         
         for(let i=0;i<=thismonth_dates.length; i++)
         {
-            //reverse them
-            thismonth_usd_buying.reverse()
-            thismonth_usd_selling.reverse()
-            thismonth_dates.reverse()
+            
+            
             let temp ={}
             temp['date']=thismonth_dates[i]
             temp['buying']=thismonth_usd_buying[i]
