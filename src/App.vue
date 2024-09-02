@@ -62,10 +62,11 @@
           <cardView :data="obj['gbp']" currency="GBP" ></cardView>  
         </v-tabs-window-item>
         <v-tabs-window-item value="boa">
-          <boacardView></boacardView>  
+          
+          <cardView :data="boa_data" bank="BOA"></cardView>  
         </v-tabs-window-item>
         <v-tabs-window-item value="cbe">
-          <cbecardView></cbecardView>
+          <cardView :data="cbe_data" bank="CBE"></cardView>
         </v-tabs-window-item>
 
       </v-tabs-window>
@@ -78,11 +79,65 @@
 </template>
 
 <script>
+//prepare boa and cbe history data
+const format_boa_cbe_history_data = (thismonth)=>{
+  let usd_data =[]
+    if (thismonth)
+    {
+        let thismonth_usd_buying = thismonth['USD']['buying']
+        
+        let thismonth_usd_selling = thismonth['USD']['selling']
+        let thismonth_dates = thismonth['categories']
+        //reverse them
+        thismonth_usd_buying.reverse()
+            thismonth_usd_selling.reverse()
+            thismonth_dates.reverse()
+            console.log(thismonth_dates)
+        
+        for(let i=0;i<thismonth_dates.length; i++)
+        {
+            
+            
+            let temp ={}
+            temp['title']=thismonth_dates[i]
+            temp['buying']=thismonth_usd_buying[i]
+            temp['selling']=thismonth_usd_selling[i]
+            usd_data.push(temp)
+        }
+
+    }
+   
+    return usd_data
+}
+
+//fetch boa last month and this month data
+const boa_cbe_data = async (bank)=>{
+    
+    
+    const response = await fetch("https://banksethiopia.com/wp-json/graph/v1/all?bankName="+bank+"&dateRange=ThisMonth")
+   
+    
+    const data_thismonth = await response.json()
+   
+    const response2 = await fetch("https://banksethiopia.com/wp-json/graph/v1/all?bankName="+bank+"&dateRange=LastMonth")
+    const data_lastmonth = await response2.json()
+
+    //format data for presentation
+    let thismonth = data_thismonth[0]
+    let lastmonth = data_lastmonth[0]
+  
+  let data = format_boa_cbe_history_data(thismonth)
+  data= data.concat(format_boa_cbe_history_data(lastmonth))
+  console.log("---merged data ---")
+  console.log(data)
+  return data
+}
+
 
 const formatted_data = (data,currency)=>{
     let lists =[]
     
-    for(let x=0; x<=data.length;x++)
+    for(let x=0; x<data.length;x++)
     {
       let obj = data[x]
       
@@ -141,7 +196,9 @@ export default {
 
   data: () => ({
     tab:'usd',
-    obj:{}
+    obj:{},
+    boa_data :[],
+    cbe_data:[]
   }),
   methods: {
       addItem (item) {
@@ -155,6 +212,10 @@ export default {
        this.obj=obj
       }
     ).catch((err)=>console.log("error "+err.message))
+    
+    boa_cbe_data('abyssinia').then((data)=>{this.boa_data=data}).catch((err)=>console.log("error "+err.message))
+    boa_cbe_data('cbe').then((data)=>{this.cbe_data=data}).catch((err)=>console.log("error "+err.message))
+
     }
 };
 </script>

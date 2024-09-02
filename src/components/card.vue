@@ -7,10 +7,15 @@
       
     >
      
-      <template v-slot:title><div class="wrap">
+      <template v-slot:title><div class="wrap" v-if="!bank">
+
         <span class="font-weight-black text-wrap">{{currency}} exchange rates of banks</span>
         <br/><span class="text-caption"> {{ getCurrentDate }}</span>
       </div>
+      <div class="wrap" v-else>
+        <span class="font-weight-black text-wrap">Recent USD exchange rates of {{bank}}</span>
+      </div> 
+
       </template>
   
       <v-card-text class="bg-surface-light pt-4">
@@ -53,7 +58,7 @@
   
   export default {
       name: 'cardView',
-      props:['data','currency'],
+      props:['data','currency','bank'],
       computed:{
         getCurrentDate(){
           //let path ="https://banksethiopia.com/wp-content/themes/banksaffiliate/assets/svgs/dbe.png"

@@ -17,7 +17,7 @@
     </v-card-text>
     <v-timeline align="start" density="compact">
         <v-timeline-item
-          v-for="message in thismonth"
+          v-for="message in data"
           :key="message.date"
           :dot-color="red"
           :icon="message.icon"
@@ -87,7 +87,9 @@ const httpdata = async ()=>{
 }
 
 export default {
+
     name: "cbecardView",
+    props:['data'],
     data() {
     return { thismonth: [] ,
         lastmonth:[]
