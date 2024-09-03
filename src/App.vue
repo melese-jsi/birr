@@ -2,14 +2,22 @@
   <v-app>
     <v-main>
 
-  <v-card>
-    <v-tabs
+  <v-card >
+ 
+    
+   
+
+
+    <v-card-text class="text-center">
+      <v-tabs
+    
       v-model="tab"
       
        align-tabs="center"
       color="deep-purple-accent-4"
       stacked
       text-wrap
+      
     >
       <v-tab value="usd">
         <v-icon icon="mdi-currency-usd"></v-icon>
@@ -44,9 +52,6 @@
 
           </v-menu>
     </v-tabs>
-
-
-    <v-card-text>
       
       <v-tabs-window v-model="tab">
         <v-tabs-window-item value="usd">
