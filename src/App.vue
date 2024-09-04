@@ -17,6 +17,7 @@
       color="deep-purple-accent-4"
       stacked
       text-wrap
+      show-arrows
       
     >
       <v-tab value="usd">
