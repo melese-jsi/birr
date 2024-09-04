@@ -30,6 +30,7 @@
       <v-tab value="gbp">
         <v-icon icon="mdi-currency-gbp"></v-icon>
         GBP</v-tab>
+        
         <v-menu><template v-slot:activator="{ props }">
               <v-btn
                 class="align-self-center me-4"
@@ -51,7 +52,10 @@
             </v-list>
 
           </v-menu>
+          <v-tab value="usd" @click="refresh"> <v-icon icon="mdi-refresh"></v-icon></v-tab>
+          
     </v-tabs>
+    
       
       <v-tabs-window v-model="tab">
         <v-tabs-window-item value="usd">
@@ -73,6 +77,7 @@
         <v-tabs-window-item value="cbe">
           <cardView :data="cbe_data" bank="CBE"></cardView>
         </v-tabs-window-item>
+        
 
       </v-tabs-window>
     </v-card-text>
@@ -210,6 +215,18 @@ export default {
         
         this.$nextTick(() => { this.tab = item })
       },
+      refresh (){
+        console.log("--refreshed")
+        httpdata().then(
+      (obj)=>{
+       this.obj=obj
+      }
+    ).catch((err)=>console.log("error "+err.message))
+    
+    boa_cbe_data('abyssinia').then((data)=>{this.boa_data=data}).catch((err)=>console.log("error "+err.message))
+    boa_cbe_data('cbe').then((data)=>{this.cbe_data=data}).catch((err)=>console.log("error "+err.message))
+
+      }
     },
     mounted(){
       httpdata().then(
