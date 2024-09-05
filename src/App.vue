@@ -31,6 +31,9 @@
       <v-tab value="gbp">
         <v-icon icon="mdi-currency-gbp"></v-icon>
         GBP</v-tab>
+        <v-tab value="boa_now">
+        <v-icon icon="mdi-bank"></v-icon>
+        BOA</v-tab>
         
         <v-menu><template v-slot:activator="{ props }">
               <v-btn
@@ -61,15 +64,15 @@
       <v-tabs-window v-model="tab">
         <v-tabs-window-item value="usd">
           
-          <cardView :data="obj['usd']" currency="USD" ></cardView>  
+          <cardView :data="obj['usd']" currency="USD" icon="mdi-currency-usd" ></cardView>  
         </v-tabs-window-item>
 
         <v-tabs-window-item value="eur">
-          <cardView :data="obj['eur']" currency="EUR" ></cardView>  
+          <cardView :data="obj['eur']" currency="EUR" icon="mdi-currency-eur" ></cardView>  
         </v-tabs-window-item>
 
         <v-tabs-window-item value="gbp">
-          <cardView :data="obj['gbp']" currency="GBP" ></cardView>  
+          <cardView :data="obj['gbp']" currency="GBP" icon="mdi-currency-gbp" ></cardView>  
         </v-tabs-window-item>
         <v-tabs-window-item value="boa">
           
@@ -77,6 +80,9 @@
         </v-tabs-window-item>
         <v-tabs-window-item value="cbe">
           <cardView :data="cbe_data" bank="CBE"></cardView>
+        </v-tabs-window-item>
+        <v-tabs-window-item value="boa_now">
+          <realTimeCardView bank="boa" ></realTimeCardView>  
         </v-tabs-window-item>
         
 
@@ -197,12 +203,14 @@ const httpdata = async ()=>{
 import boacardView from '@/components/boacard.vue'
 import cbecardView from '@/components/cbecard.vue'
 import cardView from '@/components/card.vue'
+import realTimeCardView from './components/realTimeCard.vue'
 export default {
   name: "App",
   components:{
     cardView,
     boacardView,
-    cbecardView
+    cbecardView,
+    realTimeCardView
   },
 
   data: () => ({

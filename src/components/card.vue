@@ -1,11 +1,11 @@
 <template>
     <v-app>
-        <v-card
+        
+        <v-card 
       class="mx-auto"
-      prepend-icon="mdi-currency-usd"
-       
-      
-    >
+      :prepend-icon=icon
+         >
+        
      
       <template v-slot:title><div class="wrap" v-if="!bank">
 
@@ -58,7 +58,7 @@
   
   export default {
       name: 'cardView',
-      props:['data','currency','bank'],
+      props:['data','currency','bank','icon'],
       computed:{
         getCurrentDate(){
           //let path ="https://banksethiopia.com/wp-content/themes/banksaffiliate/assets/svgs/dbe.png"
