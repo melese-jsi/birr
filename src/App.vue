@@ -31,9 +31,9 @@
       <v-tab value="gbp">
         <v-icon icon="mdi-currency-gbp"></v-icon>
         GBP</v-tab>
-        <v-tab value="boa_now">
+        <!-- <v-tab value="boa_now">
         <v-icon icon="mdi-bank"></v-icon>
-        BOA</v-tab>
+        BOA</v-tab> -->
         
         <v-menu><template v-slot:activator="{ props }">
               <v-btn
@@ -81,9 +81,9 @@
         <v-tabs-window-item value="cbe">
           <cardView :data="cbe_data" bank="CBE"></cardView>
         </v-tabs-window-item>
-        <v-tabs-window-item value="boa_now">
+        <!-- <v-tabs-window-item value="boa_now">
           <realTimeCardView bank="boa" ></realTimeCardView>  
-        </v-tabs-window-item>
+        </v-tabs-window-item> -->
         
 
       </v-tabs-window>
