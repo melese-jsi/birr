@@ -21,7 +21,7 @@
       
     >
     <v-tab value="boa_now">
-        <v-icon icon="mdi-bank"></v-icon>
+        <v-icon icon="mdi-bank" color="#F3AD14"></v-icon>
         BOA</v-tab>
       <v-tab value="usd">
         <v-icon icon="mdi-currency-usd"></v-icon>

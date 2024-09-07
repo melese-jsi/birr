@@ -22,34 +22,40 @@
     
   
       <v-card-text class="py-0">
-        <v-row align="center" no-gutters>
+        <v-row >
           <v-col
-            class="text-h5 text-light-green-darken-3"
+            class="text-h5" style="color:#1C9BC1"
             cols="6"
+
           >
-            {{ data.buying }}
+            {{ data.buying }}     
           </v-col>
   
-          <v-col class="text-right text-h6 text-orange-darken-4" cols="6">
+          <v-col class=" text-h6" style="color:#BDD52D" cols="6">
             {{ data.selling }}
           </v-col>
         </v-row>
+        <v-row class="pb-3 mt-0" v-if="data.selling">
+        <v-col cols="6"
+          >
+         <v-chip size="small" color="#1C9BC1" variant="elevated">Buying</v-chip>
+        </v-col>
+  
+        <v-col cols="6">
+          <v-chip size="small" color="#BDD52D" variant="elevated">Selling</v-chip>
+        </v-col>
+    </v-row>
+      <div v-else>
+        <v-progress-circular
+  color="light-green-darken-3"
+  indeterminate
+  :size="79"
+  :width="9"
+></v-progress-circular>
+      </div>
       </v-card-text>
   
-       <div class="d-flex py-3 justify-space-between">
-        <v-list-item
-          density="compact"
-          
-        >
-          <v-list-item-subtitle><v-chip color="light-green-darken-3" variant="elevated">Buying</v-chip></v-list-item-subtitle>
-        </v-list-item>
-  
-        <v-list-item
-          
-        >
-          <v-list-item-subtitle><v-chip color="orange-darken-4" variant="elevated">Selling</v-chip></v-list-item-subtitle>
-        </v-list-item>
-      </div>
+       
   
       
   
@@ -97,9 +103,12 @@ export default {
            data:{}
         }
     },
-    mounted(){
+    created(){
         boaRates().then((data)=>this.data=data).catch((err)=>console.log("error while parsing site "+ err.message))
 
+    },
+    mounted(){
+       
     },
     computed:{
         getCurrentDate(){
