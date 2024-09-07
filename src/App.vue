@@ -23,6 +23,10 @@
     <v-tab value="boa_now">
         <v-icon icon="mdi-bank" color="#F3AD14"></v-icon>
         BOA</v-tab>
+        <v-tab value="cbe_now">
+          <v-icon icon="mdi-bank" color="#8C3087"></v-icon>
+          CBE
+        </v-tab>
       <v-tab value="usd">
         <v-icon icon="mdi-currency-usd"></v-icon>
         USD
@@ -64,7 +68,10 @@
       
       <v-tabs-window v-model="tab">
         <v-tabs-window-item value="boa_now">
-          <realTimeCardView bank="boa" ></realTimeCardView>  
+          <realTimeCardView bank="BOA" ></realTimeCardView>  
+        </v-tabs-window-item>
+        <v-tabs-window-item value="cbe_now">
+          <realTimeCardView bank="CBE" ></realTimeCardView>  
         </v-tabs-window-item>
         <v-tabs-window-item value="usd">
           

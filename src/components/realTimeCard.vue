@@ -9,7 +9,7 @@
       
         
         <template v-slot:title>
-           <div><span class="font-weight-black text-wrap">Current Exchange Rate of BOA</span></div> 
+           <div><span class="font-weight-black text-wrap">Current Exchange Rate of {{bank}}</span></div> 
           <v-icon
             class="me-1 pb-1"
             color="error"
@@ -55,13 +55,6 @@
       </div>
       </v-card-text>
   
-       
-  
-      
-  
-    
-  
-     
     </v-card>
 </v-app>
   </template>
@@ -69,8 +62,17 @@
 
 
 <script>
-import * as cheerio from 'cheerio'
 
+const cbeRates = async ()=>{
+    const res = await fetch("https://bad-gaylene-addis-05dd0974.koyeb.app/api/cbe")
+     const data = await res.json()
+     console.log(data)
+     const buying = parseFloat(data[0].buying).toFixed(2)
+     const selling = parseFloat(data[0].selling).toFixed(2)
+     console.log(parseFloat(buying[0]).toFixed(2))
+     const usd_obj ={'date':data.date,'buying':buying,'selling':selling}
+     return usd_obj
+}
 
 
 const boaRates = async ()=>{
@@ -82,15 +84,7 @@ const boaRates = async ()=>{
      const buying = parseFloat(data.buying).toFixed(2)
      const selling = parseFloat(data.selling).toFixed(2)
      console.log(parseFloat(buying).toFixed(2))
-   
-
-    //  const data = await res.text()
-    //  const $ = cheerio.load(data)
-    //  const date = $('div.middle_content tr.row-1 th.column-1').text()
-    //  console.log($('div.middle_content tr.row-1 th.column-1').text())
-    //  const usd_buying = $('div.middle_content tbody.row-hover tr.row-4 td.column-2').text()
-    //  const usd_selling = $('div.middle_content tbody.row-hover tr.row-4 td.column-3').text()
-     const usd_obj ={'date':data.date,'buying':buying,'selling':selling}
+     const usd_obj ={'buying':buying,'selling':selling}
      return usd_obj
    
 }
@@ -104,8 +98,12 @@ export default {
         }
     },
     created(){
-        boaRates().then((data)=>this.data=data).catch((err)=>console.log("error while parsing site "+ err.message))
-
+        if (this.bank ==="BOA"){
+          boaRates().then((data)=>this.data=data).catch((err)=>console.log("error while parsing site "+ err.message))
+        }
+        else if(this.bank ==="CBE"){
+            cbeRates().then((data)=>this.data=data).catch((err)=>console.log("error while fetching data from cbe site "+ err.message))  
+        }
     },
     mounted(){
        
