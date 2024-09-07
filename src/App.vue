@@ -223,7 +223,7 @@ export default {
   },
 
   data: () => ({
-    tab:'usd',
+    tab:'boa_now',
     obj:{},
     boa_data :[],
     cbe_data:[]
