@@ -20,6 +20,9 @@
       show-arrows
       
     >
+    <v-tab value="boa_now">
+        <v-icon icon="mdi-bank"></v-icon>
+        BOA</v-tab>
       <v-tab value="usd">
         <v-icon icon="mdi-currency-usd"></v-icon>
         USD
@@ -31,9 +34,7 @@
       <v-tab value="gbp">
         <v-icon icon="mdi-currency-gbp"></v-icon>
         GBP</v-tab>
-        <!-- <v-tab value="boa_now">
-        <v-icon icon="mdi-bank"></v-icon>
-        BOA</v-tab> -->
+       
         
         <v-menu><template v-slot:activator="{ props }">
               <v-btn
@@ -62,6 +63,9 @@
     
       
       <v-tabs-window v-model="tab">
+        <v-tabs-window-item value="boa_now">
+          <realTimeCardView bank="boa" ></realTimeCardView>  
+        </v-tabs-window-item>
         <v-tabs-window-item value="usd">
           
           <cardView :data="obj['usd']" currency="USD" icon="mdi-currency-usd" ></cardView>  
@@ -81,9 +85,7 @@
         <v-tabs-window-item value="cbe">
           <cardView :data="cbe_data" bank="CBE"></cardView>
         </v-tabs-window-item>
-        <!-- <v-tabs-window-item value="boa_now">
-          <realTimeCardView bank="boa" ></realTimeCardView>  
-        </v-tabs-window-item> -->
+        
         
 
       </v-tabs-window>
