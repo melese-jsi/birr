@@ -9,7 +9,7 @@
       
         
         <template v-slot:title>
-           <div><span class="font-weight-black text-wrap">Current Exchange Rate of {{bank}}</span></div> 
+           <div><span class="font-weight-black text-wrap">Current exchange rate of {{bank}}</span></div> 
           <v-icon
             class="me-1 pb-1"
             color="error"
