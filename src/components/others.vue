@@ -1,8 +1,9 @@
 <template>
     <v-app>
         <v-card class="pa-4 mx-auto">
-          <div class="d-flex flex-row">
-            <v-tabs direction="vertical" v-model="tab" border="xs" density="comfortable" stacked variant="outlined" slider-color="red" mobile="true">
+          <v-card-text class="text-center">
+            <v-tabs align-tabs="center"
+            v-model="tab" stacked  slider-color="red" show-arrows >
                 <v-tab value="usd">
                  <v-icon icon="mdi-currency-usd" color="#1C9BC1"></v-icon>
                      USD
@@ -40,7 +41,7 @@
 
              </v-tabs-window-item>
             </v-tabs-window>
-        </div>
+          </v-card-text>
 
 
         </v-card>

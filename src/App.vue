@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main>
+    <!-- <v-main> -->
 
   <v-card >
  
@@ -119,7 +119,7 @@
   </v-card>
 
       
-    </v-main>
+    <!-- </v-main> -->
   </v-app>
 </template>
 
