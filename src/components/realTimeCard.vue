@@ -2,7 +2,7 @@
     <v-app>
     <v-card
       class="mx-auto"
-      max-width="368"
+      
       variant="elevated"
       prepend-icon="mdi-currency-usd"
     >

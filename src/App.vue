@@ -20,6 +20,10 @@
       show-arrows
       
     >
+    <!-- <v-tab value="test">
+        <v-icon icon="mdi-bank" color="#F3AD14"></v-icon>
+        test</v-tab> -->
+
     <v-tab value="boa_now">
         <v-icon icon="mdi-bank" color="#F3AD14"></v-icon>
         BOA</v-tab>
@@ -27,7 +31,13 @@
           <v-icon icon="mdi-bank" color="#8C3087"></v-icon>
           CBE
         </v-tab>
-      <v-tab value="usd">
+        <v-tab value="others">
+          <v-icon icon="mdi-shopping" color="#1C9BC1"></v-icon>
+          Others
+        </v-tab>
+
+
+      <!-- <v-tab value="usd">
         <v-icon icon="mdi-currency-usd"></v-icon>
         USD
       </v-tab>
@@ -37,9 +47,9 @@
       </v-tab>
       <v-tab value="gbp">
         <v-icon icon="mdi-currency-gbp"></v-icon>
-        GBP</v-tab>
+        GBP</v-tab> -->
        
-        
+<!--         
         <v-menu><template v-slot:activator="{ props }">
               <v-btn
                 class="align-self-center me-4"
@@ -47,33 +57,42 @@
                 rounded="0"
                 variant="plain"
                 v-bind="props"
-              >
+              > -->
                 <!-- <span class="font-weight-bold">more</span> -->
-                <v-icon icon="mdi-dots-vertical" size="x-large" color='#6200EA'></v-icon>
-                
+                <!-- <v-icon icon="mdi-dots-vertical" size="x-large" color='#6200EA'></v-icon>
+                 -->
 
                 <!-- <v-icon icon="mdi-menu-down" end></v-icon> -->
-              </v-btn>
+              <!-- </v-btn>
             </template>
             <v-list class="bg-grey-lighten-3" min-width="20px">
               <v-list-item @click="addItem('boa')">BOA</v-list-item>
               <v-list-item @click="addItem('cbe')">CBE</v-list-item>
             </v-list>
 
-          </v-menu>
-          <v-tab value="usd" @click="refresh"> <v-icon icon="mdi-refresh"></v-icon></v-tab>
+          </v-menu> -->
+          <!-- <v-tab value="usd" @click="refresh"> <v-icon icon="mdi-refresh"></v-icon></v-tab> -->
           
     </v-tabs>
     
       
       <v-tabs-window v-model="tab">
+
+        <!-- <v-tabs-window-item value="test">
+          <card2View :data="obj" currency="USD" icon="mdi-currency-usd"></card2View>
+        </v-tabs-window-item> -->
+
         <v-tabs-window-item value="boa_now">
           <realTimeCardView bank="BOA" ></realTimeCardView>  
         </v-tabs-window-item>
         <v-tabs-window-item value="cbe_now">
           <realTimeCardView bank="CBE" ></realTimeCardView>  
         </v-tabs-window-item>
-        <v-tabs-window-item value="usd">
+        <v-tabs-window-item value="others">
+          <othersView :data="obj"></othersView>  
+        </v-tabs-window-item>
+
+        <!-- <v-tabs-window-item value="usd">
           
           <cardView :data="obj['usd']" currency="USD" icon="mdi-currency-usd" ></cardView>  
         </v-tabs-window-item>
@@ -91,7 +110,7 @@
         </v-tabs-window-item>
         <v-tabs-window-item value="cbe">
           <cardView :data="cbe_data" bank="CBE"></cardView>
-        </v-tabs-window-item>
+        </v-tabs-window-item> -->
         
         
 
@@ -213,14 +232,19 @@ import boacardView from '@/components/boacard.vue'
 import cbecardView from '@/components/cbecard.vue'
 import cardView from '@/components/card.vue'
 import realTimeCardView from './components/realTimeCard.vue'
+import card2View from './components/card2.vue'
+import othersView from './components/others.vue'
 export default {
   name: "App",
   components:{
     cardView,
     boacardView,
     cbecardView,
-    realTimeCardView
-  },
+    realTimeCardView,
+    card2View,
+    othersView
+
+},
 
   data: () => ({
     tab:'boa_now',
