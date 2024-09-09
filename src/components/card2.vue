@@ -13,7 +13,8 @@
       <v-list density="compact">
     <v-list-item v-for="item in data" :key="item.title">
  <v-card variant="outlined" class="mt-3 mb-3 rounded-lg" elevation="24" density="compact" rounded="24" >
-  <v-card-title>{{ getBankName(item.title) }}</v-card-title>
+  <v-card-title v-if="history==null">{{ getBankName(item.title) }}</v-card-title>
+  <v-card-title v-if="history"><span class="text-subtitle">{{ item.title }}</span></v-card-title>
   <!-- <v-card-subtitle>{{ new Date().toDateString() }}</v-card-subtitle> -->
   <v-divider class="mt-1 mb-2"></v-divider>
   <v-card-text class="py-0">
