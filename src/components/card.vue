@@ -36,25 +36,25 @@
                
               <v-divider></v-divider>
               
-              <div><span class="text-primary pa-3">Buying</span> &mdash; <span class="chip">{{ message.buying }} </span>
+              <!-- <div><span class="text-primary pa-3">Buying</span> &mdash; <span class="chip">{{ message.buying }} </span>
                 <br/>
                 <span class="text-primary pa-3">Selling </span>&mdash;<span class="chip1" > {{ message.selling }}</span>
 
-              </div>
+              </div> -->
             </div>
 
             <v-card-text class="py-0">
         <v-row >
           <v-col
-            class="text-h5" style="color:#1C9BC1"
+            class="text-h6" style="color:#1C9BC1"
             cols="6"
 
           >
-            {{ message.buying }}     
+            {{ message.buying.toFixed(2) }}     
           </v-col>
   
-          <v-col class=" text-h6" style="color:#BDD52D" cols="6">
-            {{ message.selling }}
+          <v-col class="text-h6" style="color:#BDD52D" cols="6">
+            {{ message.selling.toFixed(2) }}
           </v-col>
         </v-row>
         <v-row class="pb-3 mt-0" v-if="message.selling">

@@ -49,28 +49,28 @@
         <v-icon icon="mdi-currency-gbp"></v-icon>
         GBP</v-tab> -->
        
-<!--         
+        
         <v-menu><template v-slot:activator="{ props }">
-              <v-btn
+               <v-btn
                 class="align-self-center me-4"
                 height="100%"
                 rounded="0"
                 variant="plain"
                 v-bind="props"
-              > -->
-                <!-- <span class="font-weight-bold">more</span> -->
-                <!-- <v-icon icon="mdi-dots-vertical" size="x-large" color='#6200EA'></v-icon>
-                 -->
+              >
+                
+                <!-- <v-icon icon="mdi-dots-vertical" size="x-large" color='#6200EA'></v-icon> -->
+                
 
-                <!-- <v-icon icon="mdi-menu-down" end></v-icon> -->
-              <!-- </v-btn>
+                Previous Rates<v-icon icon="mdi-menu-down" color="#1C9BC1" size="x-large"></v-icon>
+               </v-btn> 
             </template>
             <v-list class="bg-grey-lighten-3" min-width="20px">
               <v-list-item @click="addItem('boa')">BOA</v-list-item>
               <v-list-item @click="addItem('cbe')">CBE</v-list-item>
             </v-list>
 
-          </v-menu> -->
+          </v-menu>
           <!-- <v-tab value="usd" @click="refresh"> <v-icon icon="mdi-refresh"></v-icon></v-tab> -->
           
     </v-tabs>
@@ -103,14 +103,14 @@
 
         <v-tabs-window-item value="gbp">
           <cardView :data="obj['gbp']" currency="GBP" icon="mdi-currency-gbp" ></cardView>  
-        </v-tabs-window-item>
+        </v-tabs-window-item>-->
         <v-tabs-window-item value="boa">
           
           <cardView :data="boa_data" bank="BOA"></cardView>  
         </v-tabs-window-item>
         <v-tabs-window-item value="cbe">
           <cardView :data="cbe_data" bank="CBE"></cardView>
-        </v-tabs-window-item> -->
+        </v-tabs-window-item> 
         
         
 
