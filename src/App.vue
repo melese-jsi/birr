@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <!-- <v-main> -->
+     <v-main> 
 
-  <v-card >
+  <v-card class="mx-auto">
  
     
    
@@ -10,13 +10,13 @@
 
     <v-card-text class="text-center">
       <v-tabs
-    
+      
       v-model="tab"
       
-       align-tabs="center"
+       align-tabs="title"
       color="deep-purple-accent-4"
       stacked
-      text-wrap
+      
       show-arrows
       
     >
@@ -119,7 +119,7 @@
   </v-card>
 
       
-    <!-- </v-main> -->
+  </v-main> 
   </v-app>
 </template>
 
