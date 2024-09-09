@@ -52,17 +52,25 @@
         
         <v-menu><template v-slot:activator="{ props }">
                <v-btn
-                class="align-self-center me-4"
+                class="align-self-center"
                 height="100%"
                 rounded="0"
-                variant="plain"
+                variant="text"
                 v-bind="props"
+                prepend-icon="mdi-history"
+                stacked
+                v-icon="mdi-menu-down"
+                density="compact"
+                
               >
+              <template v-slot:prepend>
+                     <v-icon color="success"></v-icon>
+               </template>
                 
                 <!-- <v-icon icon="mdi-dots-vertical" size="x-large" color='#6200EA'></v-icon> -->
                 
 
-                Previous Rates<v-icon icon="mdi-menu-down" color="#1C9BC1" size="x-large"></v-icon>
+                <span class="h6-text">Previous Rates</span>
                </v-btn> 
             </template>
             <v-list class="bg-grey-lighten-3" min-width="20px">
@@ -74,6 +82,7 @@
           <!-- <v-tab value="usd" @click="refresh"> <v-icon icon="mdi-refresh"></v-icon></v-tab> -->
           
     </v-tabs>
+    <divider></divider>
     
       
       <v-tabs-window v-model="tab">
@@ -106,10 +115,10 @@
         </v-tabs-window-item>-->
         <v-tabs-window-item value="boa">
           
-          <cardView :data="boa_data" bank="BOA"></cardView>  
+          <card2View :data="boa_data" bank="BOA" history="true"></card2View>  
         </v-tabs-window-item>
         <v-tabs-window-item value="cbe">
-          <cardView :data="cbe_data" bank="CBE"></cardView>
+          <card2View :data="cbe_data" bank="CBE" history="true"></card2View>
         </v-tabs-window-item> 
         
         

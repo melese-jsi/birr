@@ -3,16 +3,17 @@
   <v-card class="mx-auto" >
     <v-card-title class="wrap">
       <v-icon :icon="icon" color="#1C9BC1"></v-icon>
-        <span class="font-weight-black text-wrap">Current exchange rates of banks</span>
+        <span class="font-weight-black text-wrap" v-if="history==null">Current exchange rates of banks</span>
+        <span class="font-weight-black text-wrap" v-if="history">Recent USD exchange rates of {{ bank }}</span>
        
     </v-card-title>
-    <v-card-subtitle>{{getCurrentDate}}</v-card-subtitle>
+    <v-card-subtitle v-if="history==null">{{getCurrentDate}}</v-card-subtitle>
 
     <v-vard-text>
       <v-list density="compact">
     <v-list-item v-for="item in data" :key="item.title">
  <v-card variant="outlined" class="mt-3 mb-3 rounded-lg" elevation="24" density="compact" rounded="24" >
-  <v-card-title>{{ item.title }}</v-card-title>
+  <v-card-title>{{ getBankName(item.title) }}</v-card-title>
   <!-- <v-card-subtitle>{{ new Date().toDateString() }}</v-card-subtitle> -->
   <v-divider class="mt-1 mb-2"></v-divider>
   <v-card-text class="py-0">
@@ -22,11 +23,11 @@
             cols="6"
 
           >
-           {{ item.buying }}
+           {{ parseFloat(item.buying).toFixed(2) }}
           </v-col>
   
           <v-col class=" text-h6" style="color:#BDD52D" cols="6">
-            {{item.selling}}
+            {{parseFloat(item.selling).toFixed(2)}}
           </v-col>
         </v-row>
         <v-row class="pb-3 mt-0" >
@@ -53,10 +54,24 @@
 
 <script>
 export default {
-  props:['data','currency','bank','icon'],
+  props:['data','currency','bank','icon','history'],
 
     name:"card2View",
+    methods: {
+      getBankName(title){
+               if (title ==="Dgb")
+               {
+                 return "Debub Global";
+               }
+               else if(title === "Developmentbank")
+               {
+                return "Development"
+               }
+               return title;
+       }
+    },
     computed:{
+       
         getCurrentDate(){
        
 
