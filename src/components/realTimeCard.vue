@@ -24,7 +24,7 @@
       <v-card-text class="py-0">
         <v-row >
           <v-col
-            class="text-h5" style="color:#1C9BC1"
+            class="text-h6" style="color:#1C9BC1"
             cols="6"
 
           >
