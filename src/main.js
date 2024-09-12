@@ -17,4 +17,5 @@ const vuetify = createVuetify({
 import WebApp from "@twa-dev/sdk";
 WebApp.ready();
 
+
 createApp(App).use(router).use(vuetify).mount("#app");
