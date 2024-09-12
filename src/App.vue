@@ -24,15 +24,15 @@
         <v-icon icon="mdi-bank" color="#F3AD14"></v-icon>
         test</v-tab> -->
 
-    <v-tab value="boa_now">
-        <v-icon icon="mdi-bank" color="#F3AD14"></v-icon>
+    <v-tab value="boa_now" max-width="40" min-width="40">
+        <v-icon icon="mdi-bank" color="#F3AD14" size="small"></v-icon>
         BOA</v-tab>
-        <v-tab value="cbe_now">
-          <v-icon icon="mdi-bank" color="#8C3087"></v-icon>
+        <v-tab value="cbe_now" max-width="40" min-width="40">
+          <v-icon icon="mdi-bank" color="#8C3087" size="small"></v-icon>
           CBE
         </v-tab>
-        <v-tab value="others">
-          <v-icon icon="mdi-shopping" color="#1C9BC1"></v-icon>
+        <v-tab value="others" max-width="40" min-width="40">
+          <v-icon icon="mdi-shopping" color="#1C9BC1" size="small"> </v-icon>
           Others
         </v-tab>
 
