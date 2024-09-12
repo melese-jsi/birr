@@ -3,8 +3,8 @@
   <v-card class="mx-auto" >
     <v-card-title class="wrap">
       <v-icon :icon="icon" color="#1C9BC1" size="small"></v-icon>
-        <span class="font-weight-regular text-h6 text-wrap" v-if="history==null">Current exchange rates of banks</span>
-        <span class="font-weight-regular text-h6 text-wrap" v-if="history">Recent USD exchange rates of {{ bank }}</span>
+        <span class="font-weight-regular text-h6 text-wrap" v-if="history==null">Current exchange rate of banks</span>
+        <span class="font-weight-regular text-h6 text-wrap" v-if="history">Recent USD exchange rate of {{ bank }}</span>
        
     </v-card-title>
     <v-card-subtitle v-if="history==null">{{getCurrentDate}}</v-card-subtitle>
