@@ -46,7 +46,8 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <script>
-      WebApp.ready()
+    Telegram.WebApp.ready();
+    Telegram.WebApp.isExpanded =true
     </script>
     <div id="app">
       <div class="loader"></div>
