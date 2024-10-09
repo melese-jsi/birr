@@ -64,8 +64,8 @@
 <script>
 
 const cbeRates = async ()=>{
-   // const res = await fetch("https://bad-gaylene-addis-05dd0974.koyeb.app/api/cbe")
-    const res = await fetch("http://196.189.92.13/api/cbe")
+   const res = await fetch("https://bad-gaylene-addis-05dd0974.koyeb.app/api/cbe")
+   // const res = await fetch("http://196.189.92.13/api/cbe")
      const data = await res.json()
      console.log(data)
      const buying = parseFloat(data[0].buying).toFixed(2)
@@ -79,7 +79,7 @@ const cbeRates = async ()=>{
 const boaRates = async ()=>{
     
   
-     const res = await fetch("http://196.189.92.13/")
+     const res = await fetch("https://bad-gaylene-addis-05dd0974.koyeb.app/api/")
     
      const data = await res.json()
      console.log(data)
