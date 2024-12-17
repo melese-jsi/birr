@@ -198,6 +198,7 @@ const formatted_data = (data,currency)=>{
      const temp = {'currency':currency}
      if (obj !=undefined){
       temp.title=obj['bank'].charAt(0).toUpperCase() + obj['bank'].slice(1)
+       console.log(obj['buying'],obj['selling'])
       temp.buying=obj['buying'].toFixed(2)
       temp.selling=obj['selling'].toFixed(2)
       temp.subtitle = `<span class="text-primary pa-3">Buying</span> &mdash; <span class="chip"> `+obj['buying'].toFixed(2)+` </span><br/><br/> <span class="text-primary pa-3">Selling </span>&mdash;<span class="chip1"> `+obj['selling'].toFixed(2)+`</span>`
