@@ -202,7 +202,7 @@ const formatted_data = (data,currency)=>{
       {console.log(obj['buying'],obj['selling'])}
       temp.buying= obj['buying'] != null ? obj['buying'].toFixed(2):""
       temp.selling=obj['selling'] != null ? obj['selling'].toFixed(2):""
-      temp.subtitle = `<span class="text-primary pa-3">Buying</span> &mdash; <span class="chip"> `+obj['buying'].toFixed(2)+` </span><br/><br/> <span class="text-primary pa-3">Selling </span>&mdash;<span class="chip1"> `+obj['selling'].toFixed(2)+`</span>`
+      temp.subtitle = `<span class="text-primary pa-3">Buying</span> &mdash; <span class="chip"> `+temp.buying+` </span><br/><br/> <span class="text-primary pa-3">Selling </span>&mdash;<span class="chip1"> `+temp.selling+`</span>`
       //temp.prependAvatar= logos[obj['bank']]
       temp.icon ="<v-icon='home'></v-icon>"
       lists.push(temp)
