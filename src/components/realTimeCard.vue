@@ -64,15 +64,63 @@
 <script>
 
 const cbeRates = async ()=>{
-   const res = await fetch("https://bad-gaylene-addis-05dd0974.koyeb.app/api/cbe")
+   //const res = await fetch("https://bad-gaylene-addis-05dd0974.koyeb.app/api/cbe")
+
    // const res = await fetch("http://196.189.92.13/api/cbe")
-     const data = await res.json()
-     console.log(data)
-     const buying = parseFloat(data[0].buying).toFixed(2)
-     const selling = parseFloat(data[0].selling).toFixed(2)
-     console.log(parseFloat(buying[0]).toFixed(2))
-     const usd_obj ={'date':data.date,'buying':buying,'selling':selling}
-     return usd_obj
+    // const data = await res.json()
+    // console.log(data)
+    // const buying = parseFloat(data[0].buying).toFixed(2)
+     //const selling = parseFloat(data[0].selling).toFixed(2)
+   //  console.log(parseFloat(buying[0]).toFixed(2))
+    // const usd_obj ={'date':data.date,'buying':buying,'selling':selling}
+   //  return usd_obj
+
+
+     console.log("heyyy")
+    
+    const response = await fetch("https://banksethiopia.com/wp-json/graph/v1/all?bankName=cbe&dateRange=ThisMonth")
+   
+    
+    const data_thismonth = await response.json()
+    
+
+    //format data for presentation
+    let thismonth = data_thismonth[0]
+    let usd_data =[]
+    if (thismonth)
+    {
+        let thismonth_usd_buying = thismonth['USD']['buying']
+        
+        let thismonth_usd_selling = thismonth['USD']['selling']
+        let thismonth_dates = thismonth['categories']
+        //reverse them
+        thismonth_usd_buying.reverse()
+            thismonth_usd_selling.reverse()
+            thismonth_dates.reverse()
+            //console.log(thismonth_dates)
+        
+        for(let i=0;i<1; i++)
+        {
+            
+            
+            let temp ={}
+            temp['date']=thismonth_dates[i]
+            temp['buying']=thismonth_usd_buying[i]
+            temp['selling']=thismonth_usd_selling[i]
+            usd_data.push(temp)
+        }
+
+    }
+     
+    console.log(usd_data)
+    const buying = parseFloat(usd_data[0].buying).toFixed(2)
+     const selling = parseFloat(usd_data[0].selling).toFixed(2)
+   console.log(parseFloat(buying[0]).toFixed(2))
+    const usd_obj ={'date':usd_data[0].date,'buying':buying,'selling':selling}
+    console.log(usd_obj)
+   return usd_obj
+
+  //return usd_data
 }
 
 
@@ -80,7 +128,7 @@ const boaRates = async ()=>{
     
   
      const res = await fetch("https://bad-gaylene-addis-05dd0974.koyeb.app/api/")
-    
+   
      const data = await res.json()
      console.log(data)
      const buying = parseFloat(data.buying).toFixed(2)
