@@ -228,7 +228,7 @@ const boa = async() =>{
             
             
            let temp ={}
-            temp['title']=records[i]['date']
+            temp['title']=records[i]['title']
             temp['buying']=records[i]['buying']
            temp['selling']=records[i]['selling']
             usd_data.push(temp)
