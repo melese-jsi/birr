@@ -164,8 +164,12 @@ const format_boa_cbe_history_data = (thismonth)=>{
     return usd_data
 }
 
+
+
+
 //fetch boa last month and this month data
 const boa_cbe_data = async (bank)=>{
+  console.log("cbeeee")
     
     
     const response = await fetch("https://banksethiopia.com/wp-json/graph/v1/all?bankName="+bank+"&dateRange=ThisMonth")
@@ -184,6 +188,56 @@ const boa_cbe_data = async (bank)=>{
   data= data.concat(format_boa_cbe_history_data(lastmonth))
   console.log("---merged data ---")
   console.log(data)
+  return data
+}
+
+const boa = async() =>{
+  console.log("boa loading")
+  //this month data first
+  const response = await fetch("https://banksethiopia.com/wp-json/graph/v1/all?bankName=abyssinia&dateRange=ThisMonth")
+   
+    
+    const data_thismonth = await response.json()
+   
+    //format data for presentation
+    let thismonth = data_thismonth[0]
+    
+  
+  let data = format_boa_cbe_history_data(thismonth)
+  console.log(data)
+  console.log("spitting out local data first ..............")
+  let pastmonth = {}
+  try {
+     const response2 = await fetch('/data.json')
+     pastmonth = await response2.json()
+     console.log(pastmonth)
+   
+  } catch (error) {
+    console.error("Error loading JSON from public:", error);
+  }
+
+  console.log(",,,,,"+ pastmonth)
+  const records = pastmonth["records"]
+  
+  let usd_data =[]
+    
+       
+        
+  for(let i=0;i<records.length; i++)
+      {
+            
+            
+           let temp ={}
+            temp['title']=records[i]['date']
+            temp['buying']=records[i]['buying']
+           temp['selling']=records[i]['selling']
+            usd_data.push(temp)
+        }
+
+    
+     data = data.concat(usd_data)
+     data.sort((a,b)=> new Date(b.title) - new Date(a.title))
+    console.log(data)
   return data
 }
 
@@ -276,7 +330,7 @@ export default {
       }
     ).catch((err)=>console.log("error "+err.message))
     
-    boa_cbe_data('abyssinia').then((data)=>{this.boa_data=data}).catch((err)=>console.log("error "+err.message))
+    boa().then((data)=>{this.boa_data=data}).catch((err)=>console.log("error "+err.message))
     boa_cbe_data('cbe').then((data)=>{this.cbe_data=data}).catch((err)=>console.log("error "+err.message))
 
       }
@@ -288,7 +342,7 @@ export default {
       }
     ).catch((err)=>console.log("error "+err.message))
     
-    boa_cbe_data('abyssinia').then((data)=>{this.boa_data=data}).catch((err)=>console.log("error "+err.message))
+    boa().then((data)=>{this.boa_data=data}).catch((err)=>console.log("error "+err.message))
     boa_cbe_data('cbe').then((data)=>{this.cbe_data=data}).catch((err)=>console.log("error "+err.message))
 
     }
