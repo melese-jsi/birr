@@ -235,12 +235,12 @@ const boa = async() =>{
         }
       // Find the latest date in array1
 const latestDate = new Date(
-  Math.max(...usd_data.map(item => new Date(item.date)))
+  Math.max(...usd_data.map(item => new Date(item.title)))
 );
 
 // Add only records with dates later than latestdate
 usd_data.push(
-  ...data.filter(item => new Date(item.date) > latestDate)
+  ...data.filter(item => new Date(item.title) > latestDate)
 );
 
     
