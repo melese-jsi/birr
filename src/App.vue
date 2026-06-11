@@ -208,7 +208,7 @@ const boa = async() =>{
   console.log("spitting out local data first ..............")
   let pastmonth = {}
   try {
-     const response2 = await fetch('/data.json')
+     const response2 = await fetch('/data2.json')
      pastmonth = await response2.json()
      console.log(pastmonth)
    
