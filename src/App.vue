@@ -233,12 +233,21 @@ const boa = async() =>{
            temp['selling']=records[i]['selling']
             usd_data.push(temp)
         }
+      // Find the latest date in array1
+const latestDate = new Date(
+  Math.max(...usd_data.map(item => new Date(item.date)))
+);
+
+// Add only records with dates later than latestdate
+usd_data.push(
+  ...data.filter(item => new Date(item.date) > latestDate)
+);
 
     
-     data = usd_data
-     data.sort((a,b)=> new Date(b.title) - new Date(a.title))
-    console.log(data)
-  return data
+    
+     usd_data.sort((a,b)=> new Date(b.title) - new Date(a.title))
+    console.log(usd_data)
+  return usd_data
 }
 
 
