@@ -235,7 +235,7 @@ const boa = async() =>{
         }
 
     
-     data = data.concat(usd_data)
+     data = usd_data
      data.sort((a,b)=> new Date(b.title) - new Date(a.title))
     console.log(data)
   return data
