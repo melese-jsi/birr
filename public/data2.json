@@ -1,0 +1,938 @@
+{"records":
+
+[
+  {
+    "title": "2026-06-11",
+    "buying": 155.7839,
+    "selling": 158.8996,
+    "transaction_buying": 155.6114,
+    "transaction_selling": 158.7236
+  },
+  {
+    "title": "2026-06-10",
+    "buying": 155.5314,
+    "selling": 158.642,
+    "transaction_buying": 155.3589,
+    "transaction_selling": 158.4661
+  },
+  {
+    "title": "2026-06-09",
+    "buying": 155.4502,
+    "selling": 158.5592,
+    "transaction_buying": 155.3089,
+    "transaction_selling": 158.4151
+  },
+  {
+    "title": "2026-06-08",
+    "buying": 155.2002,
+    "selling": 158.3042,
+    "transaction_buying": 155.0589,
+    "transaction_selling": 158.1601
+  },
+  {
+    "title": "2026-06-06",
+    "buying": 155.1536,
+    "selling": 158.2567,
+    "transaction_buying": 155.0123,
+    "transaction_selling": 158.1125
+  },
+  {
+    "title": "2026-06-05",
+    "buying": 155.1486,
+    "selling": 158.2516,
+    "transaction_buying": 155.0073,
+    "transaction_selling": 158.1074
+  },
+  {
+    "title": "2026-06-04",
+    "buying": 155.1404,
+    "selling": 158.2432,
+    "transaction_buying": 154.9814,
+    "transaction_selling": 158.081
+  },
+  {
+    "title": "2026-06-03",
+    "buying": 155.1238,
+    "selling": 158.2263,
+    "transaction_buying": 154.9686,
+    "transaction_selling": 158.068
+  },
+  {
+    "title": "2026-06-02",
+    "buying": 155.0738,
+    "selling": 158.1753,
+    "transaction_buying": 154.9636,
+    "transaction_selling": 158.0629
+  },
+  {
+    "title": "2026-05-30",
+    "buying": 155.0238,
+    "selling": 158.1243,
+    "transaction_buying": 154.9136,
+    "transaction_selling": 158.0119
+  },
+  {
+    "title": "2026-05-29",
+    "buying": 155.0188,
+    "selling": 158.1192,
+    "transaction_buying": 154.9086,
+    "transaction_selling": 158.0068
+  },
+  {
+    "title": "2026-05-28",
+    "buying": 155.0038,
+    "selling": 158.1039,
+    "transaction_buying": 154.8936,
+    "transaction_selling": 157.9915
+  },
+  {
+    "title": "2026-05-26",
+    "buying": 154.9938,
+    "selling": 158.0937,
+    "transaction_buying": 154.8836,
+    "transaction_selling": 157.9813
+  },
+  {
+    "title": "2026-05-25",
+    "buying": 154.4938,
+    "selling": 157.5837,
+    "transaction_buying": 154.2665,
+    "transaction_selling": 157.3518
+  },
+  {
+    "title": "2026-05-23",
+    "buying": 154.4438,
+    "selling": 157.5327,
+    "transaction_buying": 154.2165,
+    "transaction_selling": 157.3008
+  },
+  {
+    "title": "2026-05-22",
+    "buying": 154.3438,
+    "selling": 157.4307,
+    "transaction_buying": 154.1165,
+    "transaction_selling": 157.1988
+  },
+  {
+    "title": "2026-05-21",
+    "buying": 154.3288,
+    "selling": 157.4154,
+    "transaction_buying": 154.1015,
+    "transaction_selling": 157.1835
+  },
+  {
+    "title": "2026-05-20",
+    "buying": 154.3238,
+    "selling": 157.4103,
+    "transaction_buying": 154.0479,
+    "transaction_selling": 157.1289
+  },
+  {
+    "title": "2026-05-19",
+    "buying": 154.3188,
+    "selling": 157.4052,
+    "transaction_buying": 154.0429,
+    "transaction_selling": 157.1238
+  },
+  {
+    "title": "2026-05-18",
+    "buying": 154.3138,
+    "selling": 157.4001,
+    "transaction_buying": 154.0379,
+    "transaction_selling": 157.1187
+  },
+  {
+    "title": "2026-05-16",
+    "buying": 154.3088,
+    "selling": 157.395,
+    "transaction_buying": 154.0329,
+    "transaction_selling": 157.1136
+  },
+  {
+    "title": "2026-05-15",
+    "buying": 154.3038,
+    "selling": 157.3899,
+    "transaction_buying": 154.0279,
+    "transaction_selling": 157.1085
+  },
+  {
+    "title": "2026-05-14",
+    "buying": 154.2988,
+    "selling": 157.3848,
+    "transaction_buying": 154.0229,
+    "transaction_selling": 157.1034
+  },
+  {
+    "title": "2026-05-13",
+    "buying": 154.2938,
+    "selling": 157.3797,
+    "transaction_buying": 154.0179,
+    "transaction_selling": 157.0983
+  },
+  {
+    "title": "2026-05-12",
+    "buying": 154.2888,
+    "selling": 157.3746,
+    "transaction_buying": 154.0129,
+    "transaction_selling": 157.0932
+  },
+  {
+    "title": "2026-05-11",
+    "buying": 154.2838,
+    "selling": 157.3695,
+    "transaction_buying": 154.0079,
+    "transaction_selling": 157.0881
+  },
+  {
+    "title": "2026-05-09",
+    "buying": 154.2788,
+    "selling": 157.3644,
+    "transaction_buying": 153.9997,
+    "transaction_selling": 157.0797
+  },
+  {
+    "title": "2026-05-08",
+    "buying": 154.2738,
+    "selling": 157.3593,
+    "transaction_buying": 153.9962,
+    "transaction_selling": 157.0761
+  },
+  {
+    "title": "2026-05-07",
+    "buying": 154.2688,
+    "selling": 157.3542,
+    "transaction_buying": 153.9912,
+    "transaction_selling": 157.071
+  },
+  {
+    "title": "2026-05-06",
+    "buying": 154.2638,
+    "selling": 157.3491,
+    "transaction_buying": 153.9862,
+    "transaction_selling": 157.0659
+  },
+  {
+    "title": "2026-05-04",
+    "buying": 154.2588,
+    "selling": 157.344,
+    "transaction_buying": 153.9812,
+    "transaction_selling": 157.0608
+  },
+  {
+    "title": "2026-05-02",
+    "buying": 154.1625,
+    "selling": 157.2458,
+    "transaction_buying": 153.9162,
+    "transaction_selling": 156.9945
+  },
+  {
+    "title": "2026-04-30",
+    "buying": 154.1425,
+    "selling": 157.2254,
+    "transaction_buying": 153.8162,
+    "transaction_selling": 156.8925
+  },
+  {
+    "title": "2026-04-29",
+    "buying": 154.1325,
+    "selling": 157.2152,
+    "transaction_buying": 153.7662,
+    "transaction_selling": 156.8415
+  },
+  {
+    "title": "2026-04-28",
+    "buying": 154.1275,
+    "selling": 157.2101,
+    "transaction_buying": 153.7612,
+    "transaction_selling": 156.8364
+  },
+  {
+    "title": "2026-04-27",
+    "buying": 154.1225,
+    "selling": 157.205,
+    "transaction_buying": 153.7562,
+    "transaction_selling": 156.8313
+  },
+  {
+    "title": "2026-04-25",
+    "buying": 154.1175,
+    "selling": 157.1999,
+    "transaction_buying": 153.7462,
+    "transaction_selling": 156.8211
+  },
+  {
+    "title": "2026-04-24",
+    "buying": 154.1125,
+    "selling": 157.1948,
+    "transaction_buying": 153.7412,
+    "transaction_selling": 156.816
+  },
+  {
+    "title": "2026-04-23",
+    "buying": 154.1125,
+    "selling": 157.1948,
+    "transaction_buying": 153.7362,
+    "transaction_selling": 156.8109
+  },
+  {
+    "title": "2026-04-22",
+    "buying": 154.0892,
+    "selling": 157.171,
+    "transaction_buying": 153.692,
+    "transaction_selling": 156.7658
+  },
+{
+    "title": "2026-04-21",
+    "buying": 153.8392,
+    "selling": 156.9160,
+    "transaction_buying": 153.692,
+    "transaction_selling": 156.7658
+  },
+ {
+    "title": "2026-04-20",
+    "buying": 153.8342,
+    "selling": 156.9109,
+    "transaction_buying": 153.692,
+    "transaction_selling": 156.7658
+  },
+  {
+    "title": "2026-04-18",
+    "buying": 153.8292,
+    "selling": 156.9058,
+    "transaction_buying": 153.177,
+    "transaction_selling": 156.2405
+  },
+  {
+    "title": "2026-04-17",
+    "buying": 153.8242,
+    "selling": 156.9007,
+    "transaction_buying": 153.177,
+    "transaction_selling": 156.2405
+  },
+  {
+    "title": "2026-04-16",
+    "buying": 153.8192,
+    "selling": 156.8956,
+    "transaction_buying": 153.172,
+    "transaction_selling": 156.2354
+  },
+  {
+    "title": "2026-04-15",
+    "buying": 153.8142,
+    "selling": 156.8905,
+    "transaction_buying": 153.167,
+    "transaction_selling": 156.2303
+  },
+  {
+    "title": "2026-04-14",
+    "buying": 153.8092,
+    "selling": 156.8854,
+    "transaction_buying": 153.162,
+    "transaction_selling": 156.2252
+  },
+  {
+    "title": "2026-04-13",
+    "buying": 153.8042,
+    "selling": 156.8803,
+    "transaction_buying": 153.157,
+    "transaction_selling": 156.2201
+  },
+  {
+    "title": "2026-04-11",
+    "buying": 153.7992,
+    "selling": 156.8752,
+    "transaction_buying": 153.152,
+    "transaction_selling": 156.215
+  },
+  {
+    "title": "2026-04-09",
+    "buying": 153.7942,
+    "selling": 156.8701,
+    "transaction_buying": 153.147,
+    "transaction_selling": 156.2099
+  },
+  {
+    "title": "2026-04-08",
+    "buying": 153.7892,
+    "selling": 156.865,
+    "transaction_buying": 153.142,
+    "transaction_selling": 156.2048
+  },
+  {
+    "title": "2026-04-07",
+    "buying": 153.7842,
+    "selling": 156.8599,
+    "transaction_buying": 153.137,
+    "transaction_selling": 156.1997
+  },
+  {
+    "title": "2026-04-06",
+    "buying": 153.7792,
+    "selling": 156.8548,
+    "transaction_buying": 153.132,
+    "transaction_selling": 156.1946
+  },
+  {
+    "title": "2026-04-04",
+    "buying": 153.7742,
+    "selling": 156.8497,
+    "transaction_buying": 153.1305,
+    "transaction_selling": 156.1931
+  },
+  {
+    "title": "2026-04-03",
+    "buying": 153.7692,
+    "selling": 156.8446,
+    "transaction_buying": 153.1255,
+    "transaction_selling": 156.188
+  },
+  {
+    "title": "2026-04-02",
+    "buying": 153.4684,
+    "selling": 156.5378,
+    "transaction_buying": 153.1205,
+    "transaction_selling": 156.1829
+  },
+  {
+    "title": "2026-04-01",
+    "buying": 153.4634,
+    "selling": 156.5327,
+    "transaction_buying": 153.1155,
+    "transaction_selling": 156.1778
+  },
+  {
+    "title": "2026-03-31",
+    "buying": 153.4584,
+    "selling": 156.5276,
+    "transaction_buying": 153.1105,
+    "transaction_selling": 156.1727
+  },
+  {
+    "title": "2026-03-30",
+    "buying": 153.4534,
+    "selling": 156.5225,
+    "transaction_buying": 153.1055,
+    "transaction_selling": 156.1676
+  },
+  {
+    "title": "2026-03-28",
+    "buying": 153.4484,
+    "selling": 156.5174,
+    "transaction_buying": 153.1005,
+    "transaction_selling": 156.1625
+  },
+  {
+    "title": "2026-03-27",
+    "buying": 153.4434,
+    "selling": 156.5123,
+    "transaction_buying": 153.0955,
+    "transaction_selling": 156.1574
+  },
+  {
+    "title": "2026-03-26",
+    "buying": 153.4384,
+    "selling": 156.5072,
+    "transaction_buying": 153.0905,
+    "transaction_selling": 156.1523
+  },
+  {
+    "title": "2026-03-25",
+    "buying": 153.4334,
+    "selling": 156.5021,
+    "transaction_buying": 153.0855,
+    "transaction_selling": 156.1472
+  },
+  {
+    "title": "2026-03-24",
+    "buying": 153.4284,
+    "selling": 156.497,
+    "transaction_buying": 153.0805,
+    "transaction_selling": 156.1421
+  },
+  {
+    "title": "2026-03-23",
+    "buying": 153.4234,
+    "selling": 156.4919,
+    "transaction_buying": 153.0755,
+    "transaction_selling": 156.137
+  },
+  {
+    "title": "2026-03-21",
+    "buying": 153.4184,
+    "selling": 156.4868,
+    "transaction_buying": 153.0705,
+    "transaction_selling": 156.1319
+  },
+  {
+    "title": "2026-03-19",
+    "buying": 153.4134,
+    "selling": 156.4817,
+    "transaction_buying": 153.0655,
+    "transaction_selling": 156.1268
+  },
+  {
+    "title": "2026-03-18",
+    "buying": 153.4084,
+    "selling": 156.4766,
+    "transaction_buying": 153.0605,
+    "transaction_selling": 156.1217
+  },
+  {
+    "title": "2026-03-17",
+    "buying": 153.4034,
+    "selling": 156.4715,
+    "transaction_buying": 153.0555,
+    "transaction_selling": 156.1166
+  },
+ {
+    "title": "2026-03-16",
+    "buying": 153.3984,
+    "selling": 156.4664,
+    "transaction_buying": 153.0555,
+    "transaction_selling": 156.1166
+  },
+  {
+    "title": "2026-03-14",
+    "buying": 153.3934,
+    "selling": 156.4613,
+    "transaction_buying": 153.0455,
+    "transaction_selling": 156.1064
+  },
+  {
+    "title": "2026-03-13",
+    "buying": 153.3884,
+    "selling": 156.4562,
+    "transaction_buying": 153.0405,
+    "transaction_selling": 156.1013
+  },
+  {
+    "title": "2026-03-12",
+    "buying": 153.3834,
+    "selling": 156.4511,
+    "transaction_buying": 153.0355,
+    "transaction_selling": 156.0962
+  },
+  {
+    "title": "2026-03-11",
+    "buying": 153.3734,
+    "selling": 156.4409,
+    "transaction_buying": 153.0255,
+    "transaction_selling": 156.086
+  },
+  {
+    "title": "2026-03-10",
+    "buying": 153.3584,
+    "selling": 156.4256,
+    "transaction_buying": 153.0105,
+    "transaction_selling": 156.0707
+  },
+  {
+    "title": "2026-03-09",
+    "buying": 153.3534,
+    "selling": 156.4205,
+    "transaction_buying": 153.0055,
+    "transaction_selling": 156.0656
+  },
+  {
+    "title": "2026-03-07",
+    "buying": 153.2784,
+    "selling": 156.344,
+    "transaction_buying": 152.7056,
+    "transaction_selling": 155.7597
+  },
+  {
+    "title": "2026-03-06",
+    "buying": 153.2734,
+    "selling": 156.3389,
+    "transaction_buying": 152.6056,
+    "transaction_selling": 155.6577
+  },
+  {
+    "title": "2026-03-05",
+    "buying": 153.2692,
+    "selling": 156.3346,
+    "transaction_buying": 152.5377,
+    "transaction_selling": 155.5885
+  },
+  {
+    "title": "2026-03-04",
+    "buying": 153.2642,
+    "selling": 156.3295,
+    "transaction_buying": 152.5327,
+    "transaction_selling": 155.5834
+  },
+  {
+    "title": "2026-03-03",
+    "buying": 153.2592,
+    "selling": 156.3244,
+    "transaction_buying": 152.5277,
+    "transaction_selling": 155.5783
+  },
+  {
+    "title": "2026-02-28",
+    "buying": 153.2542,
+    "selling": 156.3193,
+    "transaction_buying": 152.5227,
+    "transaction_selling": 155.5732
+  },
+  {
+    "title": "2026-02-27",
+    "buying": 153.2492,
+    "selling": 156.3142,
+    "transaction_buying": 152.5177,
+    "transaction_selling": 155.5681
+  },
+  {
+    "title": "2026-02-26",
+    "buying": 153.2442,
+    "selling": 156.3091,
+    "transaction_buying": 152.5127,
+    "transaction_selling": 155.563
+  },
+  {
+    "title": "2026-02-25",
+    "buying": 153.2392,
+    "selling": 156.304,
+    "transaction_buying": 152.5077,
+    "transaction_selling": 155.5579
+  },
+  {
+    "title": "2026-02-24",
+    "buying": 153.2342,
+    "selling": 156.2989,
+    "transaction_buying": 152.9999,
+    "transaction_selling": 156.0599
+  },
+  {
+    "title": "2026-02-23",
+    "buying": 153.1842,
+    "selling": 156.2479,
+    "transaction_buying": 152.5027,
+    "transaction_selling": 155.5528
+  },
+  {
+    "title": "2026-02-21",
+    "buying": 153.1116,
+    "selling": 156.1738,
+    "transaction_buying": 152.3919,
+    "transaction_selling": 155.4397
+  },
+  {
+    "title": "2026-02-20",
+    "buying": 153.0016,
+    "selling": 156.0616,
+    "transaction_buying": 152.2825,
+    "transaction_selling": 155.3282
+  },
+  {
+    "title": "2026-02-19",
+    "buying": 152.9966,
+    "selling": 156.0565,
+    "transaction_buying": 152.2775,
+    "transaction_selling": 155.3231
+  },
+ {
+    "title": "2026-02-18",
+    "buying": 152.8466,
+    "selling": 155.9035,
+    "transaction_buying": 152.1725,
+    "transaction_selling": 155.216
+  },
+  {
+    "title": "2026-02-17",
+    "buying": 152.8416,
+    "selling": 155.8984,
+    "transaction_buying": 152.1725,
+    "transaction_selling": 155.216
+  },
+  {
+    "title": "2026-02-16",
+    "buying": 152.8341,
+    "selling": 155.8908,
+    "transaction_buying": 152.165,
+    "transaction_selling": 155.2083
+  },
+  {
+    "title": "2026-02-14",
+    "buying": 152.8291,
+    "selling": 155.886,
+    "transaction_buying": 152.16,
+    "transaction_selling": 155.2032
+  },
+  {
+    "title": "2026-02-13",
+    "buying": 152.7412,
+    "selling": 155.796,
+    "transaction_buying": 152.1549,
+    "transaction_selling": 155.198
+  },
+  {
+    "title": "2026-02-12",
+    "buying": 152.736,
+    "selling": 155.791,
+    "transaction_buying": 152.1499,
+    "transaction_selling": 155.1929
+  },
+  {
+    "title": "2026-02-11",
+    "buying": 152.7237,
+    "selling": 155.7782,
+    "transaction_buying": 152.1424,
+    "transaction_selling": 155.1852
+  },
+  {
+    "title": "2026-02-10",
+    "buying": 152.7187,
+    "selling": 155.7731,
+    "transaction_buying": 152.1374,
+    "transaction_selling": 155.1801
+  },
+  {
+    "title": "2026-02-09",
+    "buying": 152.713,
+    "selling": 155.768,
+    "transaction_buying": 152.132,
+    "transaction_selling": 155.1746
+  },
+  {
+    "title": "2026-02-07",
+    "buying": 152.7083,
+    "selling": 155.7625,
+    "transaction_buying": 152.127,
+    "transaction_selling": 155.1695
+  },
+  {
+    "title": "2026-02-06",
+    "buying": 152.7033,
+    "selling": 155.7574,
+    "transaction_buying": 152.122,
+    "transaction_selling": 155.1644
+  },
+  {
+    "title": "2026-02-05",
+    "buying": 152.6983,
+    "selling": 155.7523,
+    "transaction_buying": 152.117,
+    "transaction_selling": 155.1593
+  },
+  {
+    "title": "2026-02-04",
+    "buying": 152.6112,
+    "selling": 155.6634,
+    "transaction_buying": 152.112,
+    "transaction_selling": 155.1542
+  },
+  {
+    "title": "2026-02-03",
+    "buying": 152.6062,
+    "selling": 155.6583,
+    "transaction_buying": 152.107,
+    "transaction_selling": 155.1491
+  },
+  {
+    "title": "2026-02-02",
+    "buying": 152.6012,
+    "selling": 155.6532,
+    "transaction_buying": 152.102,
+    "transaction_selling": 155.144
+  },
+
+ {
+    "title": "2026-01-31",
+    "buying": 152.596,
+    "selling": 155.648,
+    "transaction_buying": 152.097,
+    "transaction_selling": 155.138
+  },
+
+  {
+    "title": "2026-01-30",
+    "buying": 152.592,
+    "selling": 155.6438,
+    "transaction_buying": 152.092,
+    "transaction_selling": 155.1338
+  },
+  {
+    "title": "2026-01-29",
+    "buying": 152.587,
+    "selling": 155.6387,
+    "transaction_buying": 152.087,
+    "transaction_selling": 155.1287
+  },
+  {
+    "title": "2026-01-28",
+    "buying": 152.582,
+    "selling": 155.6336,
+    "transaction_buying": 152.082,
+    "transaction_selling": 155.1236
+  },
+  {
+    "title": "2026-01-27",
+    "buying": 152.577,
+    "selling": 155.6285,
+    "transaction_buying": 152.077,
+    "transaction_selling": 155.1185
+  },
+  {
+    "title": "2026-01-26",
+    "buying": 152.568,
+    "selling": 155.6194,
+    "transaction_buying": 152.068,
+    "transaction_selling": 155.1094
+  },
+  {
+    "title": "2026-01-24",
+    "buying": 152.344,
+    "selling": 155.3909,
+    "transaction_buying": 151.9595,
+    "transaction_selling": 154.9987
+  },
+  {
+    "title": "2026-01-23",
+    "buying": 152.344,
+    "selling": 155.3909,
+    "transaction_buying": 151.9595,
+    "transaction_selling": 154.9987
+  },
+  {
+    "title": "2026-01-22",
+    "buying": 152.334,
+    "selling": 155.3807,
+    "transaction_buying": 151.9495,
+    "transaction_selling": 154.9885
+  },
+  {
+    "title": "2026-01-21",
+    "buying": 152.309,
+    "selling": 155.3552,
+    "transaction_buying": 151.9245,
+    "transaction_selling": 154.963
+  },
+  {
+    "title": "2026-01-20",
+    "buying": 152.294,
+    "selling": 155.3399,
+    "transaction_buying": 151.9095,
+    "transaction_selling": 154.9477
+  },
+  {
+    "title": "2026-01-17",
+    "buying": 152.284,
+    "selling": 155.3297,
+    "transaction_buying": 151.8995,
+    "transaction_selling": 154.9375
+  },
+  {
+    "title": "2026-01-16",
+    "buying": 152.284,
+    "selling": 155.3297,
+    "transaction_buying": 151.8995,
+    "transaction_selling": 154.9375
+  },
+  {
+    "title": "2026-01-15",
+    "buying": 152.2744,
+    "selling": 155.3199,
+    "transaction_buying": 151.8902,
+    "transaction_selling": 154.928
+  },
+  {
+    "title": "2026-01-14",
+    "buying": 152.2744,
+    "selling": 155.3199,
+    "transaction_buying": 151.8902,
+    "transaction_selling": 154.928
+  },
+  {
+    "title": "2026-01-13",
+    "buying": 152.2694,
+    "selling": 155.3148,
+    "transaction_buying": 151.8852,
+    "transaction_selling": 154.9229
+  },
+  {
+    "title": "2026-01-12",
+    "buying": 152.2644,
+    "selling": 155.3097,
+    "transaction_buying": 151.8752,
+    "transaction_selling": 154.9127
+  },
+  {
+    "title": "2026-01-10",
+    "buying": 152.2644,
+    "selling": 155.3097,
+    "transaction_buying": 151.8752,
+    "transaction_selling": 154.9127
+  },
+  {
+    "title": "2026-01-09",
+    "buying": 152.2544,
+    "selling": 155.2995,
+    "transaction_buying": 151.8652,
+    "transaction_selling": 154.9025
+  },
+  {
+    "title": "2026-01-08",
+    "buying": 152.2544,
+    "selling": 155.2995,
+    "transaction_buying": 151.8652,
+    "transaction_selling": 154.9025
+  },
+  {
+    "title": "2026-01-06",
+    "buying": 152.225,
+    "selling": 155.2695,
+    "transaction_buying": 151.8602,
+    "transaction_selling": 154.8974
+  },
+  {
+    "title": "2026-01-05",
+    "buying": 152.2071,
+    "selling": 155.2512,
+    "transaction_buying": 151.7102,
+    "transaction_selling": 154.7444
+  },
+  {
+    "title": "2026-01-03",
+    "buying": 152.2021,
+    "selling": 155.2461,
+    "transaction_buying": 151.7052,
+    "transaction_selling": 154.7393
+  },
+  {
+    "title": "2026-01-02",
+    "buying": 152.1942,
+    "selling": 155.2381,
+    "transaction_buying": 151.7002,
+    "transaction_selling": 154.7342
+  },
+  {
+    "title": "2026-01-01",
+    "buying": 152.0141,
+    "selling": 155.0544,
+    "transaction_buying": 151.6952,
+    "transaction_selling": 154.7291
+  },
+  {
+    "title": "2025-12-31",
+    "buying": 152.0091,
+    "selling": 155.0493,
+    "transaction_buying": 151.6902,
+    "transaction_selling": 154.724
+  },
+  {
+    "title": "2025-12-30",
+    "buying": 152.0037,
+    "selling": 155.0438,
+    "transaction_buying": 151.6852,
+    "transaction_selling": 154.7189
+  },
+  {
+    "title": "2025-12-29",
+    "buying": 151.9987,
+    "selling": 155.0387,
+    "transaction_buying": 151.6752,
+    "transaction_selling": 154.7087
+  }
+]
+}
