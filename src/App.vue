@@ -194,17 +194,17 @@ const boa_cbe_data = async (bank)=>{
 const boa = async() =>{
   console.log("boa loading")
   //this month data first
-  const response = await fetch("https://banksethiopia.com/wp-json/graph/v1/all?bankName=abyssinia&dateRange=ThisMonth")
+  //const response = await fetch("https://banksethiopia.com/wp-json/graph/v1/all?bankName=abyssinia&dateRange=ThisMonth")
    
     
-    const data_thismonth = await response.json()
+   // const data_thismonth = await response.json()
    
     //format data for presentation
-    let thismonth = data_thismonth[0]
+    //let thismonth = data_thismonth[0]
     
   
-  let data = format_boa_cbe_history_data(thismonth)
-  console.log(data)
+  // let data = format_boa_cbe_history_data(thismonth)
+  //console.log(data)
   console.log("spitting out local data first ..............")
   let pastmonth = {}
   try {
@@ -250,7 +250,8 @@ const latestDate = new Date(
   
 // Add only records with dates later than latestdate
 usd_data.push(
-  ...usd_obj.filter(item => new Date(item.title) > latestDate)
+  //...usd_obj.filter(item => new Date(item.title) > latestDate)
+  usd_obj
 );
 
     
