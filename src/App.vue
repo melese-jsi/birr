@@ -238,9 +238,19 @@ const latestDate = new Date(
   Math.max(...usd_data.map(item => new Date(item.title)))
 );
 
+   const res = await fetch("https://bad-gaylene-addis-05dd0974.koyeb.app/api/")
+   
+     const today_boa = await res.json()
+     console.log(today_boa)
+     const buying = parseFloat(today_boa.buying).toFixed(2)
+     const selling = parseFloat(today_boa.selling).toFixed(2)
+     console.log(parseFloat(buying).toFixed(2))
+     const usd_obj ={'buying':buying,'selling':selling, 'title":today_boa.date}
+     
+  
 // Add only records with dates later than latestdate
 usd_data.push(
-  ...data.filter(item => new Date(item.title) > latestDate)
+  ...usd_obj.filter(item => new Date(item.title) > latestDate)
 );
 
     
