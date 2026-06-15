@@ -1,6 +1,14 @@
 {"records":
 
 [
+
+   {
+    "title": "2026-06-13",
+    "buying": 156.0137,
+    "selling": 159.1340,
+    "transaction_buying": 155.6114,
+    "transaction_selling": 158.7236
+  },
   {
     "title": "2026-06-12",
     "buying": 155.9137,
