@@ -245,7 +245,7 @@ const latestDate = new Date(
      const buying = parseFloat(today_boa.buying).toFixed(2)
      const selling = parseFloat(today_boa.selling).toFixed(2)
      console.log(parseFloat(buying).toFixed(2))
-     const usd_obj ={'buying':buying,'selling':selling, 'title":today_boa.date}
+     const usd_obj ={'buying':buying,'selling':selling, 'title':today_boa.date}
      
   
 // Add only records with dates later than latestdate
