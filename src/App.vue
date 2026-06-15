@@ -190,84 +190,16 @@ const boa_cbe_data = async (bank)=>{
   console.log(data)
   return data
 }
-const fs = require('fs');
+
 const boa = async() =>{
-  console.log("boa loading")
-  //this month data first
-  //const response = await fetch("https://banksethiopia.com/wp-json/graph/v1/all?bankName=abyssinia&dateRange=ThisMonth")
+  const res = await fetch("https://bad-gaylene-addis-05dd0974.koyeb.app/api/boa")
+  //const res = await fetch("http://127.0.0.1:5007/boa")
    
-    
-   // const data_thismonth = await response.json()
-   
-    //format data for presentation
-    //let thismonth = data_thismonth[0]
-    
-  
-  // let data = format_boa_cbe_history_data(thismonth)
-  //console.log(data)
-  console.log("spitting out local data first ..............")
-  let pastmonth = {}
-  try {
-     const response2 = await fetch('/data2.json')
-     pastmonth = await response2.json()
-     console.log(pastmonth)
-   
-  } catch (error) {
-    console.error("Error loading JSON from public:", error);
-  }
-
-  console.log(",,,,,"+ pastmonth)
-  const records = pastmonth["records"]
-  
-  let usd_data =[]
-    
-       
-        
-  for(let i=0;i<records.length; i++)
-      {
-            
-            
-           let temp ={}
-            temp['title']=records[i]['title']
-            temp['buying']=records[i]['buying']
-           temp['selling']=records[i]['selling']
-            usd_data.push(temp)
-        }
-      // Find the latest date in array1
-const latestDate = new Date(
-  Math.max(...usd_data.map(item => new Date(item.title)))
-);
-
-   const res = await fetch("https://bad-gaylene-addis-05dd0974.koyeb.app/api/")
-   
-     const today_boa = await res.json()
-     console.log(today_boa)
-     const buying = parseFloat(today_boa.buying).toFixed(2)
-     const selling = parseFloat(today_boa.selling).toFixed(2)
-     console.log(parseFloat(buying).toFixed(2))
-     const usd_obj ={'buying':buying,'selling':selling, 'title':today_boa.date}
-     
-  
-// Add only records with dates later than latestdate
-usd_data.push(
-  //...usd_obj.filter(item => new Date(item.title) > latestDate)
-  usd_obj
-);
+     const boa_history = await res.json()
+     console.log("---loading new boa history --")
+     console.log(boa_history)
+     return boa_history
  
-
-fs.writeFileSync(
-  '/data2.json',
-  JSON.stringify(usd_data, null, 2),
-  'utf8'
-);
-
-console.log('Data saved to data2.json');
-
-    
-    
-     usd_data.sort((a,b)=> new Date(b.title) - new Date(a.title))
-    console.log(usd_data)
-  return usd_data
 }
 
 
