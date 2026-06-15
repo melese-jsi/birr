@@ -190,7 +190,7 @@ const boa_cbe_data = async (bank)=>{
   console.log(data)
   return data
 }
-
+const fs = require('fs');
 const boa = async() =>{
   console.log("boa loading")
   //this month data first
@@ -253,6 +253,15 @@ usd_data.push(
   //...usd_obj.filter(item => new Date(item.title) > latestDate)
   usd_obj
 );
+ 
+
+fs.writeFileSync(
+  '/data2.json',
+  JSON.stringify(usd_data, null, 2),
+  'utf8'
+);
+
+console.log('Data saved to data2.json');
 
     
     
