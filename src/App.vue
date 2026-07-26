@@ -192,13 +192,13 @@ const boa_cbe_data = async (bank)=>{
 }
 
 const boa = async() =>{
-  const res = await fetch("https://bad-gaylene-addis-05dd0974.koyeb.app/api/boa")
+  const res = await fetch("https://bad-gaylene-addis-05dd0974.koyeb.app/api/boa-rates")
   //const res = await fetch("http://127.0.0.1:5007/boa")
    
      const boa_history = await res.json()
      console.log("---loading new boa history --")
      console.log(boa_history)
-     return boa_history
+     return boa_history['data']
  
 }
 
